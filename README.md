@@ -36,10 +36,10 @@ Now you need to go on the OB (Option Bytes) and find the Read Out Protection (RD
 
 The [STM32Cube MCU Packages](https://www.st.com/en/embedded-software/stm32cube-mcu-packages.html) does not have the exactly mcu (stm32l071cz), but is possible to use some similar to make works.
 
-You can use the stm32l073, the pinout is realy similar and should work like a charm.
+You can use the `stm32l073`, the pinout is really similar and should work like a charm.
 
-Select the board "Nucleo-64" and board part number "Nucleo L073RZ". You need to change the upload method to 
-"STM32CubeProgrammer (SWD)".
+Select the board `Nucleo-64` and board part number `Nucleo L073RZ`. You need to change the upload method to 
+`STM32CubeProgrammer (SWD)`.
 
 Now is possible to burn some blick example. 
 
@@ -68,6 +68,8 @@ Default Serial is on the pins GPIO0 and GPIO1.
 </pre>
 
 ## LoRa
+
+<b>This lmic part is a little unstable, for some reason, the program stops working.</b>
 
 This part about the LoRa radio and it was tested with the [arduino-lmic](https://github.com/mcci-catena/arduino-lmic) library. The basic configuration you can check below.
 
