@@ -2,6 +2,8 @@
 
 This is a reverse engineering project to make possible to program the RadioEnge LoRa Module on the Arduino IDE using [Arduino_Core_STM32](https://github.com/stm32duino/Arduino_Core_STM32).
 
+* This board works stable with [Arduino_Core_STM32 v1.7.0](https://github.com/stm32duino/Arduino_Core_STM32/releases) and [arduino-lmic v2.3.2](https://github.com/mcci-catena/arduino-lmic/releases).
+
 ## Board
 
 The board use the `stm32l071cz` mcu with the `sx1272` lora module, the pins connections is like the image below.
@@ -107,7 +109,7 @@ Remember you need to change the config file of the lmic library and define `CFG_
 const lmic_pinmap lmic_pins = {
   .nss = RADIO_NSS_PORT,
   .rxtx = RADIO_RXTX_PORT,
-  .rst = LMIC_UNUSED_PIN,
+  .rst = RADIO_RESET_PORT,
   .dio = {RADIO_DIO_0_PORT, RADIO_DIO_1_PORT, RADIO_DIO_2_PORT},
   .rxtx_rx_active = 1,
 };
