@@ -20,7 +20,7 @@ This image shows the pins of the mcu.
 
 It's possible to burn and create your firmware using the Arduino IDE using the [Arduino_Core_STM32](https://github.com/stm32duino/Arduino_Core_STM32). Is not possible to burn the firwmare using the Serial, the BOOT0 pin is not accessible in this board, but is possible to use the SWD to programing the mcu, you need ST-LINK to do the job.
 
-You need to install the [STM32Cube MCU Packages](https://www.st.com/en/embedded-software/stm32cube-mcu-packages.html) to be able to erase the original firmware, the original firmware is not available to re-burn, this process is irreversible.
+You need to install the [STM32Cube MCU Packages](https://www.st.com/en/embedded-software/stm32cube-mcu-packages.html) or [STM32CubeProg](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog.html) to be able to erase the original firmware, the original firmware is not available to re-burn, this process is irreversible.
 
 After installing the STM32CubeProgrammer, connect the ST-LINK. if your ST-LINK is new the STM32CubeProgrammer probably gonna update the ST-LINK firmware.
 
