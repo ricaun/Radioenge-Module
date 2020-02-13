@@ -2,7 +2,7 @@
 
 This is a reverse engineering project to make possible to program the RadioEnge LoRa Module on the Arduino IDE using [Arduino_Core_STM32](https://github.com/stm32duino/Arduino_Core_STM32).
 
-* This board works stable with [Arduino_Core_STM32 v1.7.0](https://github.com/stm32duino/Arduino_Core_STM32/releases) and [arduino-lmic v2.3.2](https://github.com/mcci-catena/arduino-lmic/releases).
+* This board works stable with [Arduino_Core_STM32 v1.8.0](https://github.com/stm32duino/Arduino_Core_STM32/releases) and [STM32 - arduino-lmic v3.1.0](https://github.com/ricaun/arduino-lmic).
 
 ## Board
 
@@ -71,9 +71,9 @@ Default Serial is on the pins GPIO0 and GPIO1.
 
 ## LoRa
 
-<b>This lmic part is a little unstable, for some reason, the program stops working.</b>
+<b>The original lmic part is a little unstable, `noInterrupt()` break the program and stops working.</b>
 
-This part about the LoRa radio and it was tested with the [arduino-lmic](https://github.com/mcci-catena/arduino-lmic) library. The basic configuration you can check below.
+You need to download my version of the [arduino-lmic v3.1.0](https://github.com/ricaun/arduino-lmic) library.
 
 Remember you need to change the config file of the lmic library and define `CFG_sx1272_radio`.
 
@@ -100,7 +100,7 @@ Remember you need to change the config file of the lmic library and define `CFG_
 #### lmic_project_config.h
 
 <pre>
-#define CFG_au921 1
+#define CFG_au915 1
 #define CFG_sx1272_radio 1
 </pre>
 
