@@ -264,6 +264,7 @@ void setup() {
 
     LMIC_setAdrMode(0);
     LMIC_setLinkCheckMode(0);
+    LMIC_setClockError (MAX_CLOCK_ERROR * 10 / 100);
 
     // Start job
     do_send(&sendjob);
